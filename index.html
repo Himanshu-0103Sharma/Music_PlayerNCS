@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dafc35ca56.js" crossorigin="anonymous"></script>
+    <title>Music Player</title>
+</head>
+<body>
+    <img class = "background_cover" src = "img/culturecode.jpg">
+    <main>
+        <div class="cover">
+            <img class = "music_cover" src = "img/culturecode.jpg">
+            <span class = "music_title">culturecode - ncs</span>
+            
+            <div class="volume_control">
+                <i style = "font-size:20px" class="fas fa-volume-up"></i>
+                <input type = "range" class = "vol_range" onchange="vol_change();">
+            </div>
+        </div>
+
+        <audio class = "music" src = "music/culturecode.mp3"></audio>
+
+        <div class="controls">
+            <input class = "music_progress" type="range" value = "0" onchange = "music_progress();">
+            <div class="controls_btn">
+                <button class="previous" onclick = "prebtn_pressed();"><i class="fas fa-backward"></i></button>
+                <button class="play" onclick = "playbtn_pressed()"><i class="fas fa-play"></i></button>
+                <button class="next" onclick = "nextbtn_pressed();"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
